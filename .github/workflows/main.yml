@@ -10,17 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-      
+    
     - name: Setup Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14'
-        
+        node-version: '16'  # Cập nhật lên Node.js 16 hoặc phiên bản cao hơn
+
     - name: Install dependencies
       run: npm ci
-      
-    - name: Install discord.js
-      run: npm install discord.js
       
     - name: Fetch images
       run: npm run fetch
