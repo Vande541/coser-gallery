@@ -1,9 +1,13 @@
-const { Client, GatewayIntentBits } = require('discord.js');
+const { Client, Intents } = require('discord.js');
 const fs = require('fs'); // Module hệ thống file
 
-const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
+const client = new Client({ intents: [
+    Intents.FLAGS.GUILDS,
+    Intents.FLAGS.GUILD_MESSAGES,
+    Intents.FLAGS.MESSAGE_CONTENT
+] });
 
-const channelId =process.env.DISCORD_CHANNEL_ID;  // ID của kênh Discord mà mày muốn lấy hình ảnh
+const channelId = process.env.DISCORD_CHANNEL_ID;  // ID của kênh Discord mà bạn muốn lấy hình ảnh
 
 client.once('ready', async () => {
     console.log('Bot đã sẵn sàng!');
