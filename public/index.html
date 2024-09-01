@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Images</title>
+</head>
+<body>
+    <div id="image-container"></div>
+
+    <script>
+        // Tải file JSON chứa các liên kết hình ảnh
+        fetch('../src/imageUrls.json')
+            .then(response => response.json())
+            .then(imageUrls => {
+                const container = document.getElementById('image-container');
+                imageUrls.forEach(url => {
+                    const img = document.createElement('img');
+                    img.src = url;
+                    img.alt = "Discord Image";
+                    container.appendChild(img);
+                });
+            });
+    </script>
+</body>
+</html>
