@@ -7,7 +7,7 @@ const client = new Client({ intents: [
     Intents.FLAGS.MESSAGE_CONTENT
 ] });
 
-const channelId = process.env.DISCORD_CHANNEL_ID;  // ID của kênh Discord mà bạn muốn lấy hình ảnh
+const channelId = '1243511031821766751';  // ID của kênh Discord mà bạn muốn lấy hình ảnh
 
 client.once('ready', async () => {
     console.log('Bot đã sẵn sàng!');
@@ -39,4 +39,4 @@ client.once('ready', async () => {
     client.destroy();  // Tắt bot sau khi lấy xong
 });
 
-client.login(process.env.DISCORD_BOT_TOKEN);
+client.login('MTI3OTc0NzE5MjAwNDkzOTkwOA.GWPBx2.g8wUTnA5uvGIG1pZ_FJwtkWq3lb7K9rg11Qu7s');
