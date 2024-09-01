@@ -1,0 +1,11 @@
+{
+  "name": "discord-image-fetcher",
+  "version": "1.0.0",
+  "scripts": {
+    "fetch": "node src/fetchimage.js",
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "discord.js": "^13.0.0"
+  }
+}
